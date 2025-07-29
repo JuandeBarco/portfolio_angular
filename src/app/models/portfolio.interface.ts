@@ -19,4 +19,18 @@ export interface ContactInfo {
   linkedin: string;
   github: string;
   phone?: string;
+}
+
+export interface WorkExperience {
+  id: number;
+  position: string;
+  company: string;
+  location: string;
+  startDate: string;
+  endDate?: string; // null for current position
+  isCurrent: boolean;
+  description: string;
+  achievements: string[];
+  technologies: string[];
+  companyLogo?: string;
 } 
