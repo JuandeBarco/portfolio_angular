@@ -14,11 +14,20 @@ import { environment } from '../../../environments/environment';
 })
 export class NavbarComponent {
   dev_name = environment.dev_name;
+  isMobileMenuOpen = false;
   
   scrollToSection(sectionId: string): void {
     const element = document.getElementById(sectionId);
     if (element) {
       element.scrollIntoView({ behavior: 'smooth' });
     }
+  }
+
+  toggleMobileMenu(): void {
+    this.isMobileMenuOpen = !this.isMobileMenuOpen;
+  }
+
+  closeMobileMenu(): void {
+    this.isMobileMenuOpen = false;
   }
 }

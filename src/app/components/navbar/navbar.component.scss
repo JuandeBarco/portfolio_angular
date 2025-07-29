@@ -56,6 +56,65 @@
       }
     }
   }
+
+  .mobile-menu-btn {
+    display: none;
+    color: white;
+  }
+}
+
+// Mobile Navigation Menu
+.mobile-nav {
+  position: fixed;
+  top: 64px; // Height of navbar
+  left: 0;
+  right: 0;
+  background: rgba(63, 81, 181, 0.98);
+  backdrop-filter: blur(10px);
+  transform: translateY(-100%);
+  transition: transform 0.3s ease-in-out;
+  z-index: 999;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+
+  &.open {
+    transform: translateY(0);
+  }
+
+  .mobile-nav-content {
+    padding: 1rem;
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+
+    button {
+      color: white;
+      font-weight: 500;
+      padding: 1rem;
+      border-radius: 8px;
+      transition: all 0.3s ease;
+      text-align: left;
+      width: 100%;
+
+      &:hover {
+        background-color: rgba(255, 255, 255, 0.1);
+      }
+
+      mat-icon {
+        margin-right: 1rem;
+      }
+    }
+
+    .mobile-cta {
+      margin-top: 1rem;
+      padding-top: 1rem;
+      border-top: 1px solid rgba(255, 255, 255, 0.2);
+
+      button {
+        width: 100%;
+        font-weight: 600;
+      }
+    }
+  }
 }
 
 // Responsive design
@@ -63,14 +122,39 @@
   .navbar {
     padding: 0 1rem;
 
-    .navbar-links {
-      display: none; // Hide on mobile for now
+    .desktop-nav {
+      display: none !important;
     }
 
-    .navbar-actions {
+    .mobile-menu-btn {
+      display: block !important;
+    }
+
+    .navbar-brand {
+      .brand-text {
+        font-size: 1.2rem;
+      }
+    }
+  }
+
+  .mobile-nav {
+    top: 56px; // Smaller navbar height on mobile
+  }
+}
+
+// Tablet adjustments
+@media (min-width: 769px) and (max-width: 1024px) {
+  .navbar {
+    padding: 0 1.5rem;
+
+    .navbar-links {
+      gap: 0.5rem;
+
       button {
-        span {
-          display: none; // Hide text, show only icon
+        font-size: 0.9rem;
+
+        mat-icon {
+          margin-right: 0.25rem;
         }
       }
     }
