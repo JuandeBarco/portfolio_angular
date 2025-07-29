@@ -1,0 +1,35 @@
+<mat-toolbar color="primary" class="navbar">
+  <div class="navbar-brand">
+    <span class="brand-text">{{ dev_name }}</span>
+  </div>
+  
+  <div class="navbar-links">
+    <button mat-button (click)="scrollToSection('home')">
+      <mat-icon>home</mat-icon>
+      Inicio
+    </button>
+    <button mat-button (click)="scrollToSection('about')">
+      <mat-icon>person</mat-icon>
+      Sobre Mí
+    </button>
+    <button mat-button (click)="scrollToSection('skills')">
+      <mat-icon>code</mat-icon>
+      Habilidades
+    </button>
+    <button mat-button (click)="scrollToSection('projects')">
+      <mat-icon>work</mat-icon>
+      Proyectos
+    </button>
+    <button mat-button (click)="scrollToSection('contact')">
+      <mat-icon>contact_mail</mat-icon>
+      Contacto
+    </button>
+  </div>
+
+  <div class="navbar-actions">
+    <button mat-raised-button color="accent" (click)="scrollToSection('contact')">
+      <mat-icon>download</mat-icon>
+      Descargar CV
+    </button>
+  </div>
+</mat-toolbar>

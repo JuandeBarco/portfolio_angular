@@ -1,0 +1,49 @@
+<section id="projects" class="projects-section">
+  <div class="container">
+    <h2 class="section-title">Mis Proyectos</h2>
+    
+    <div class="projects-grid">
+      <mat-card class="project-card" *ngFor="let project of projects">
+        <div class="project-image">
+          <img [src]="project.imageUrl" [alt]="project.title" class="project-img">
+          <div class="project-overlay">
+            <div class="project-actions">
+              <button mat-icon-button color="primary" *ngIf="project.githubUrl" 
+                      (click)="window.open(project.githubUrl, '_blank')">
+                <mat-icon>code</mat-icon>
+              </button>
+              <button mat-icon-button color="primary" *ngIf="project.liveUrl"
+                      (click)="window.open(project.liveUrl, '_blank')">
+                <mat-icon>launch</mat-icon>
+              </button>
+            </div>
+          </div>
+        </div>
+        
+        <mat-card-content>
+          <h3 class="project-title">{{ project.title }}</h3>
+          <p class="project-description">{{ project.description }}</p>
+          
+          <div class="project-technologies">
+            <mat-chip *ngFor="let tech of project.technologies" class="tech-chip">
+              {{ tech }}
+            </mat-chip>
+          </div>
+        </mat-card-content>
+        
+        <mat-card-actions>
+          <button mat-button color="primary" *ngIf="project.githubUrl"
+                  (click)="window.open(project.githubUrl, '_blank')">
+            <mat-icon>code</mat-icon>
+            Ver Código
+          </button>
+          <button mat-raised-button color="primary" *ngIf="project.liveUrl"
+                  (click)="window.open(project.liveUrl, '_blank')">
+            <mat-icon>launch</mat-icon>
+            Ver Demo
+          </button>
+        </mat-card-actions>
+      </mat-card>
+    </div>
+  </div>
+</section>

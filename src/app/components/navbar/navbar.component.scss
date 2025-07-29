@@ -1,0 +1,78 @@
+.navbar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 1000;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 2rem;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(10px);
+  background-color: rgba(63, 81, 181, 0.95) !important;
+
+  .navbar-brand {
+    .brand-text {
+      font-size: 1.5rem;
+      font-weight: 600;
+      color: white;
+    }
+  }
+
+  .navbar-links {
+    display: flex;
+    gap: 1rem;
+    align-items: center;
+
+    button {
+      color: white;
+      font-weight: 500;
+      transition: all 0.3s ease;
+
+      &:hover {
+        background-color: rgba(255, 255, 255, 0.1);
+        transform: translateY(-2px);
+      }
+
+      mat-icon {
+        margin-right: 0.5rem;
+      }
+    }
+  }
+
+  .navbar-actions {
+    button {
+      font-weight: 600;
+      transition: all 0.3s ease;
+
+      &:hover {
+        transform: translateY(-2px);
+        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+      }
+
+      mat-icon {
+        margin-right: 0.5rem;
+      }
+    }
+  }
+}
+
+// Responsive design
+@media (max-width: 768px) {
+  .navbar {
+    padding: 0 1rem;
+
+    .navbar-links {
+      display: none; // Hide on mobile for now
+    }
+
+    .navbar-actions {
+      button {
+        span {
+          display: none; // Hide text, show only icon
+        }
+      }
+    }
+  }
+}

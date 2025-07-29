@@ -1,0 +1,57 @@
+<section id="home" class="hero-section">
+  <div class="hero-background">
+    <div class="hero-overlay"></div>
+  </div>
+  
+  <div class="hero-content">
+    <div class="hero-text">
+      <h1 class="hero-title">
+        ¡Hola! Soy <span class="highlight">{{ dev_name }}</span>
+      </h1>
+      <h2 class="hero-subtitle">
+        Desarrollador Full Stack & Diseñador de Experiencias Digitales
+      </h2>
+      <p class="hero-description">
+        Creo aplicaciones web modernas y experiencias digitales excepcionales 
+        utilizando las últimas tecnologías y mejores prácticas de desarrollo.
+      </p>
+      
+      <div class="hero-actions">
+        <button mat-raised-button color="primary" class="cta-button" (click)="scrollToSection('projects')">
+          <mat-icon>visibility</mat-icon>
+          Ver Proyectos
+        </button>
+        <button mat-stroked-button color="primary" class="secondary-button" (click)="scrollToSection('contact')">
+          <mat-icon>contact_mail</mat-icon>
+          Contactar
+        </button>
+      </div>
+    </div>
+    
+    <div class="hero-visual">
+      <div class="code-animation">
+        <div class="code-line">
+          <span class="code-keyword">const</span> 
+          <span class="code-variable">developer</span> = {{ '{' }}
+        </div>
+        <div class="code-line indent">
+          <span class="code-property">name:</span> 
+          <span class="code-string">'{{ dev_name }}'</span>,
+        </div>
+        <div class="code-line indent">
+          <span class="code-property">skills:</span> 
+          <span class="code-string">['Angular', 'TypeScript', 'Node.js']</span>,
+        </div>
+        <div class="code-line indent">
+          <span class="code-property">passion:</span> 
+          <span class="code-string">'Creating amazing experiences'</span>
+        </div>
+        <div class="code-line">{{ '}' }};</div>
+      </div>
+    </div>
+  </div>
+  
+  <div class="scroll-indicator" (click)="scrollToSection('about')">
+    <mat-icon>keyboard_arrow_down</mat-icon>
+  </div>
+</section>

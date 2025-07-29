@@ -1,0 +1,219 @@
+.contact-section {
+  padding: 5rem 0;
+  background: white;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 2rem;
+}
+
+.section-title {
+  text-align: center;
+  font-size: 2.5rem;
+  font-weight: 700;
+  margin-bottom: 3rem;
+  color: #2c3e50;
+  position: relative;
+
+  &::after {
+    content: '';
+    position: absolute;
+    bottom: -10px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 80px;
+    height: 4px;
+    background: linear-gradient(45deg, #667eea, #764ba2);
+    border-radius: 2px;
+  }
+}
+
+.contact-content {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 3rem;
+  align-items: start;
+}
+
+.contact-info {
+  .info-card {
+    border-radius: 16px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+    border: none;
+    overflow: hidden;
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    color: white;
+
+    mat-card-content {
+      padding: 2rem;
+
+      h3 {
+        font-size: 1.8rem;
+        font-weight: 600;
+        margin-bottom: 1rem;
+        color: white;
+      }
+
+      p {
+        font-size: 1.1rem;
+        line-height: 1.6;
+        margin-bottom: 2rem;
+        opacity: 0.9;
+      }
+
+      .contact-details {
+        .contact-item {
+          display: flex;
+          align-items: center;
+          gap: 1rem;
+          margin-bottom: 1.5rem;
+          padding: 1rem;
+          background: rgba(255, 255, 255, 0.1);
+          border-radius: 12px;
+          transition: all 0.3s ease;
+
+          &:hover {
+            background: rgba(255, 255, 255, 0.2);
+            transform: translateX(5px);
+          }
+
+          &:last-child {
+            margin-bottom: 0;
+          }
+
+          mat-icon {
+            font-size: 1.5rem;
+            width: 1.5rem;
+            height: 1.5rem;
+            color: #ffd700;
+          }
+
+          .contact-text {
+            display: flex;
+            flex-direction: column;
+
+            .label {
+              font-size: 0.9rem;
+              opacity: 0.8;
+              margin-bottom: 0.25rem;
+            }
+
+            a {
+              color: white;
+              text-decoration: none;
+              font-weight: 500;
+              transition: color 0.3s ease;
+
+              &:hover {
+                color: #ffd700;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+.contact-form {
+  .form-card {
+    border-radius: 16px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+    border: none;
+    overflow: hidden;
+
+    mat-card-content {
+      padding: 2rem;
+
+      h3 {
+        font-size: 1.5rem;
+        font-weight: 600;
+        margin-bottom: 2rem;
+        color: #2c3e50;
+        text-align: center;
+      }
+
+      form {
+        .form-field {
+          width: 100%;
+          margin-bottom: 1.5rem;
+
+          ::ng-deep .mat-mdc-form-field {
+            width: 100%;
+          }
+
+          ::ng-deep .mat-mdc-text-field-wrapper {
+            border-radius: 8px;
+          }
+        }
+
+        .submit-btn {
+          width: 100%;
+          padding: 1rem;
+          font-size: 1.1rem;
+          font-weight: 600;
+          border-radius: 8px;
+          transition: all 0.3s ease;
+
+          &:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 8px 25px rgba(0, 0, 0, 0.2);
+          }
+
+          mat-icon {
+            margin-right: 0.5rem;
+          }
+        }
+      }
+    }
+  }
+}
+
+// Responsive design
+@media (max-width: 768px) {
+  .contact-content {
+    grid-template-columns: 1fr;
+    gap: 2rem;
+  }
+
+  .section-title {
+    font-size: 2rem;
+  }
+
+  .contact-info .info-card mat-card-content {
+    padding: 1.5rem;
+
+    h3 {
+      font-size: 1.5rem;
+    }
+
+    p {
+      font-size: 1rem;
+    }
+
+    .contact-details .contact-item {
+      padding: 0.75rem;
+
+      mat-icon {
+        font-size: 1.2rem;
+        width: 1.2rem;
+        height: 1.2rem;
+      }
+    }
+  }
+
+  .contact-form .form-card mat-card-content {
+    padding: 1.5rem;
+
+    h3 {
+      font-size: 1.3rem;
+    }
+
+    form .submit-btn {
+      padding: 0.75rem;
+      font-size: 1rem;
+    }
+  }
+}

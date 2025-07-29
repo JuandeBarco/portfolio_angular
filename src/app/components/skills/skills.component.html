@@ -1,0 +1,46 @@
+<section id="skills" class="skills-section">
+  <div class="container">
+    <h2 class="section-title">Mis Habilidades</h2>
+    
+    <div class="skills-grid">
+      <div class="skill-category" *ngFor="let category of skillCategories">
+        <mat-card class="skill-card">
+          <mat-card-header>
+            <mat-card-title>{{ getCategoryTitle(category) }}</mat-card-title>
+          </mat-card-header>
+          
+          <mat-card-content>
+            <div class="skill-item" *ngFor="let skill of getSkillsByCategory(category)">
+              <div class="skill-header">
+                <span class="skill-name">{{ skill.name }}</span>
+                <span class="skill-level">{{ skill.level }}%</span>
+              </div>
+              <mat-progress-bar 
+                mode="determinate" 
+                [value]="skill.level"
+                class="skill-progress">
+              </mat-progress-bar>
+            </div>
+          </mat-card-content>
+        </mat-card>
+      </div>
+    </div>
+    
+    <div class="skills-summary">
+      <mat-card class="summary-card">
+        <mat-card-content>
+          <h3>Resumen de Habilidades</h3>
+          <div class="skill-chips">
+            <mat-chip 
+              *ngFor="let skill of skills.slice(0, 8)" 
+              class="skill-chip"
+              [style.background]="'linear-gradient(45deg, #667eea, #764ba2)'"
+              color="primary">
+              {{ skill.name }}
+            </mat-chip>
+          </div>
+        </mat-card-content>
+      </mat-card>
+    </div>
+  </div>
+</section>

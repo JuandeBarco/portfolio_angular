@@ -1,0 +1,84 @@
+<section id="contact" class="contact-section">
+  <div class="container">
+    <h2 class="section-title">Contacto</h2>
+    
+    <div class="contact-content">
+      <div class="contact-info">
+        <mat-card class="info-card">
+          <mat-card-content>
+            <h3>¡Hablemos!</h3>
+            <p>
+              ¿Tienes un proyecto en mente? ¿Te gustaría colaborar? 
+              ¡Me encantaría escuchar sobre tu idea!
+            </p>
+            
+            <div class="contact-details" *ngIf="contactInfo">
+              <div class="contact-item">
+                <mat-icon>email</mat-icon>
+                <div class="contact-text">
+                  <span class="label">Email</span>
+                  <a [href]="'mailto:' + contactInfo.email">{{ contactInfo.email }}</a>
+                </div>
+              </div>
+              
+              <div class="contact-item">
+                <mat-icon>phone</mat-icon>
+                <div class="contact-text">
+                  <span class="label">Teléfono</span>
+                  <a [href]="'tel:' + contactInfo.phone">{{ contactInfo.phone }}</a>
+                </div>
+              </div>
+              
+              <div class="contact-item">
+                <mat-icon>link</mat-icon>
+                <div class="contact-text">
+                  <span class="label">LinkedIn</span>
+                  <a [href]="contactInfo.linkedin" target="_blank">Ver perfil</a>
+                </div>
+              </div>
+              
+              <div class="contact-item">
+                <mat-icon>code</mat-icon>
+                <div class="contact-text">
+                  <span class="label">GitHub</span>
+                  <a [href]="contactInfo.github" target="_blank">Ver repositorios</a>
+                </div>
+              </div>
+            </div>
+          </mat-card-content>
+        </mat-card>
+      </div>
+      
+      <div class="contact-form">
+        <mat-card class="form-card">
+          <mat-card-content>
+            <h3>Envíame un mensaje</h3>
+            
+            <form (ngSubmit)="submitForm()" #contactFormRef="ngForm">
+              <mat-form-field appearance="outline" class="form-field">
+                <mat-label>Nombre</mat-label>
+                <input matInput [(ngModel)]="contactForm.name" name="name" required>
+              </mat-form-field>
+              
+              <mat-form-field appearance="outline" class="form-field">
+                <mat-label>Email</mat-label>
+                <input matInput type="email" [(ngModel)]="contactForm.email" name="email" required>
+              </mat-form-field>
+              
+              <mat-form-field appearance="outline" class="form-field">
+                <mat-label>Mensaje</mat-label>
+                <textarea matInput [(ngModel)]="contactForm.message" name="message" 
+                          rows="5" required></textarea>
+              </mat-form-field>
+              
+              <button mat-raised-button color="primary" type="submit" class="submit-btn">
+                <mat-icon>send</mat-icon>
+                Enviar Mensaje
+              </button>
+            </form>
+          </mat-card-content>
+        </mat-card>
+      </div>
+    </div>
+  </div>
+</section>
