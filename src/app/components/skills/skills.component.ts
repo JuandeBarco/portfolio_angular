@@ -37,8 +37,8 @@ export class SkillsComponent implements OnInit {
     const titles: { [key: string]: string } = {
       frontend: 'Frontend',
       backend: 'Backend',
-      database: 'Base de Datos',
-      tools: 'Herramientas'
+      database: 'Database',
+      tools: 'Tools'
     };
     return titles[category] || category;
   }

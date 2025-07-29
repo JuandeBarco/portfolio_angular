@@ -1,6 +1,6 @@
 <section id="experience" class="experience-section">
   <div class="container">
-    <h2 class="section-title">Experiencia Laboral</h2>
+    <h2 class="section-title">Work Experience</h2>
     
     <div class="experience-timeline">
       <div class="timeline-item" *ngFor="let job of experience; let i = index">
@@ -26,7 +26,7 @@
                   <span class="start-date">{{ formatDate(job.startDate) }}</span>
                   <span class="separator">-</span>
                   <span class="end-date" *ngIf="!job.isCurrent">{{ formatDate(job.endDate!) }}</span>
-                  <span class="current" *ngIf="job.isCurrent">Presente</span>
+                  <span class="current" *ngIf="job.isCurrent">Present</span>
                 </div>
                 <div class="duration">{{ getDuration(job.startDate, job.endDate) }}</div>
               </div>
@@ -35,14 +35,14 @@
             <p class="job-description">{{ job.description }}</p>
             
             <div class="job-achievements">
-              <h5>Logros Principales:</h5>
+              <h5>Main Achievements:</h5>
               <ul>
                 <li *ngFor="let achievement of job.achievements">{{ achievement }}</li>
               </ul>
             </div>
             
             <div class="job-technologies">
-              <h5>Tecnologías:</h5>
+              <h5>Technologies:</h5>
               <div class="tech-chips">
                 <mat-chip *ngFor="let tech of job.technologies" class="tech-chip">
                   {{ tech }}
@@ -57,23 +57,19 @@
     <div class="experience-summary">
       <mat-card class="summary-card">
         <mat-card-content>
-          <h3>Resumen de Carrera</h3>
+          <h3>Career Summary</h3>
           <div class="summary-stats">
             <div class="stat-item">
               <div class="stat-number">{{ experience.length }}</div>
-              <div class="stat-label">Posiciones</div>
+              <div class="stat-label">Positions</div>
             </div>
             <div class="stat-item">
-              <div class="stat-number">5+</div>
-              <div class="stat-label">Años de Experiencia</div>
+              <div class="stat-number">7+</div>
+              <div class="stat-label">Years of Experience</div>
             </div>
             <div class="stat-item">
-              <div class="stat-number">20+</div>
-              <div class="stat-label">Proyectos Completados</div>
-            </div>
-            <div class="stat-item">
-              <div class="stat-number">8</div>
-              <div class="stat-label">Equipo Liderado</div>
+              <div class="stat-number">10+</div>
+              <div class="stat-label">Projects Completed</div>
             </div>
           </div>
         </mat-card-content>

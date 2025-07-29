@@ -39,7 +39,7 @@ export class ExperienceComponent implements OnInit {
 
   formatDate(dateString: string): string {
     const date = new Date(dateString);
-    return date.toLocaleDateString('es-ES', { 
+    return date.toLocaleDateString('en-US', { 
       year: 'numeric', 
       month: 'long' 
     });
@@ -54,11 +54,11 @@ export class ExperienceComponent implements OnInit {
     
     let duration = '';
     if (years > 0) {
-      duration += `${years} año${years > 1 ? 's' : ''}`;
+      duration += `${years} year${years > 1 ? 's' : ''}`;
     }
     if (months > 0 || years === 0) {
       if (duration) duration += ' ';
-      duration += `${months} mes${months > 1 ? 'es' : ''}`;
+      duration += `${months} month${months > 1 ? 's' : ''}`;
     }
     
     return duration;

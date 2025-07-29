@@ -42,27 +42,30 @@ export class PortfolioService {
 
   getSkills(): Observable<Skill[]> {
     const skills: Skill[] = [
-      { name: 'Angular', level: 90, category: 'frontend' },
-      { name: 'TypeScript', level: 85, category: 'frontend' },
-      { name: 'JavaScript', level: 90, category: 'frontend' },
-      { name: 'HTML/CSS', level: 95, category: 'frontend' },
-      { name: 'Node.js', level: 80, category: 'backend' },
-      { name: 'Express.js', level: 75, category: 'backend' },
-      { name: 'MongoDB', level: 70, category: 'database' },
-      { name: 'PostgreSQL', level: 65, category: 'database' },
+      { name: 'Vue JS', level: 90, category: 'frontend' },
+      { name: 'Angular', level: 75, category: 'frontend' },
+      { name: 'Expo (React Native)', level: 60, category: 'frontend' },
+      { name: 'Flutter', level: 50, category: 'frontend' },
+      { name: 'Blade', level: 95, category: 'frontend' },
+      { name: 'Laravel', level: 100, category: 'backend' },
+      { name: 'Nest JS', level: 50, category: 'backend' },
+      { name: 'MySQL', level: 95, category: 'database' },
+      { name: 'SQL Server', level: 90, category: 'database' },
+      { name: 'PostgreSQL', level: 90, category: 'database' },
       { name: 'Git', level: 85, category: 'tools' },
-      { name: 'Docker', level: 60, category: 'tools' },
-      { name: 'AWS', level: 55, category: 'tools' }
+      { name: 'Docker', level: 50, category: 'tools' },
+      { name: 'AWS', level: 30, category: 'tools' },
+      { name: 'Linux', level: 90, category: 'tools' }
     ];
     return of(skills);
   }
 
   getContactInfo(): Observable<ContactInfo> {
     const contact: ContactInfo = {
-      email: 'juan@example.com',
-      linkedin: 'https://linkedin.com/in/juandebarco',
+      email: 'jddbarco@gmail.com',
+      linkedin: 'https://linkedin.com/in/juande-barco',
       github: 'https://github.com/juandebarco',
-      phone: '+1 (555) 123-4567'
+      phone: '+52 XXX XXX XXXX'
     };
     return of(contact);
   }
@@ -71,70 +74,70 @@ export class PortfolioService {
     const experience: WorkExperience[] = [
       {
         id: 1,
-        position: 'Jefe Técnico',
-        company: 'TechCorp Solutions',
-        location: 'Ciudad de México, México',
-        startDate: '2023-01',
+        position: 'Technical Lead',
+        company: 'OPD Servicios de Salud Jalisco',
+        location: 'Guadalajara, México',
+        startDate: '2025-01',
         isCurrent: true,
-        description: 'Lidero el equipo de desarrollo de 8 ingenieros, estableciendo estándares de código, arquitecturas escalables y mejores prácticas de desarrollo.',
+        description: 'Full stack development and technical leadership for the development team.',
         achievements: [
-          'Reduje el tiempo de deployment en un 60% implementando CI/CD',
-          'Mentoreé a 5 desarrolladores junior que ahora son mid-level',
-          'Implementé arquitectura de microservicios que mejoró la escalabilidad',
-          'Establecí procesos de code review que redujeron bugs en producción en un 40%'
+          'Collaborated with the product team to define the technical requirements and architecture of the applications.',
+          'Developed and maintained a web application using Laravel and Angular.',
+          'Developed and maintained a mobile application using React Native and Flutter.',
+          'Tech lead for the development team.'
         ],
-        technologies: ['Angular', 'Node.js', 'Docker', 'AWS', 'MongoDB', 'PostgreSQL', 'Git', 'Jenkins']
+        technologies: ['Laravel', 'Angular', 'Node.js', 'Expo (React Native)', 'Flutter', 'MariaDB', 'Linux']
       },
       {
         id: 2,
-        position: 'Desarrollador Full Stack Senior',
-        company: 'Digital Innovations',
+        position: 'Software developer mid-level',
+        company: 'Secretaría de Administración Jalisco',
         location: 'Guadalajara, México',
-        startDate: '2021-03',
-        endDate: '2022-12',
+        startDate: '2021-09',
+        endDate: '2024-12',
         isCurrent: false,
-        description: 'Desarrollé aplicaciones web complejas y APIs RESTful, trabajando en equipo con diseñadores y product managers.',
+        description: 'Developed and maintained web applications and APIs, working in a team with designers and product managers.',
         achievements: [
-          'Desarrollé 3 aplicaciones web que generaron $2M en ingresos',
-          'Optimicé el rendimiento de la aplicación principal en un 70%',
-          'Implementé autenticación JWT y autorización basada en roles',
-          'Mentoreé a 2 desarrolladores junior'
+          'Developed 5 web applications that were used by 1000+ users.',
+          'Optimized the performance of the main application by at least 50%',
+          'Created dashboards to monitor the performance of the applications.',
+          'Implemented JWT authentication and role-based authorization for APIs',
+          'Mentored 2 junior developers' 
         ],
-        technologies: ['Angular', 'React', 'Node.js', 'Express', 'MongoDB', 'Redis', 'Docker']
+        technologies: ['Laravel', 'Nest JS', 'jQuery', 'Livewire', 'Bootstrap', 'MySQL', 'Linux']
       },
       {
         id: 3,
-        position: 'Desarrollador Frontend',
-        company: 'StartupXYZ',
-        location: 'Monterrey, México',
-        startDate: '2019-06',
-        endDate: '2021-02',
+        position: 'Software developer junior',
+        company: 'Huezo\'s Shrimp Farm',
+        location: 'Manzanillo, México (Remote)',
+        startDate: '2018-09',
+        endDate: '2020-08',
         isCurrent: false,
-        description: 'Especializado en desarrollo frontend con Angular, creando interfaces de usuario intuitivas y responsivas.',
+        description: 'Developed a web application to manage the farm and the internal traceability of the shrimp.',
         achievements: [
-          'Desarrollé 5 componentes reutilizables que aceleraron el desarrollo',
-          'Implementé lazy loading que mejoró el tiempo de carga en un 50%',
-          'Integré APIs de terceros para funcionalidades de pago',
-          'Participé en el diseño de la arquitectura frontend'
+          'Integration with a sensor based system to monitor the temperature, pH, and other parameters of the shrimp',
+          'Integrated a notification system to send notifications to the farmers when something is wrong with the shrimp',
+          'Created a dashboard to monitor the farm and the shrimp',
+          'Created a system to manage the inventory of the farm'
         ],
-        technologies: ['Angular', 'TypeScript', 'RxJS', 'Angular Material', 'Sass', 'Jest']
+        technologies: ['CodeIgniter', 'Python', 'JavaScript', 'Bootstrap', 'MySQL', 'Arduino']
       },
       {
         id: 4,
-        position: 'Desarrollador Freelance',
-        company: 'Independiente',
-        location: 'Remoto',
-        startDate: '2018-01',
-        endDate: '2019-05',
+        position: 'Software developer intern',
+        company: 'Peña Colorada Mine',
+        location: 'Colima, México',
+        startDate: '2018-02',
+        endDate: '2018-08',
         isCurrent: false,
-        description: 'Desarrollé proyectos web para diversos clientes, desde sitios web corporativos hasta aplicaciones complejas.',
+        description: 'Internship to develop and maintain web applications and APIs for the IT department of the mine.',
         achievements: [
-          'Completé 15+ proyectos exitosos para diferentes industrias',
-          'Desarrollé e-commerce que generó $500K en ventas',
-          'Creé sistema de gestión de inventario para empresa manufacturera',
-          'Mantuve 100% de satisfacción del cliente'
+          'Created a web application to manage the inventory of the IT department',
+          'Created a web application to register the maintenance of the vehicles of the mine',
+          'Technical support by help desk to the employees'
         ],
-        technologies: ['Angular', 'JavaScript', 'HTML/CSS', 'Node.js', 'MongoDB', 'Firebase']
+        technologies: ['CodeIgniter', 'JavaScript', 'Bootstrap', 'MySQL']
       }
     ];
     return of(experience);
